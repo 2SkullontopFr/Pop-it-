@@ -1,0 +1,186 @@
+local UI = {}
+local currentIndex = 1
+
+local assetIds = {
+    "rbxassetid://18322450826",
+    "rbxassetid://18322537246",
+    "rbxassetid://18322161797",
+    "rbxassetid://18322411109",
+    "rbxassetid://18322576034",
+    "rbxassetid://18322542625",
+    "rbxassetid://18322414975",
+    "rbxassetid://18322293236",
+    "rbxassetid://18322546236",
+    "rbxassetid://18322165295",
+    "rbxassetid://18322577597",
+    "rbxassetid://18322454027",
+    "rbxassetid://18322434935",
+    "rbxassetid://18322289015",
+    "rbxassetid://18322574743",
+    "rbxassetid://18322548176",
+    "rbxassetid://18322290682",
+    "rbxassetid://18322533561",
+    "rbxassetid://18322457560",
+    "rbxassetid://18322532144",
+    "rbxassetid://18322413050",
+    "rbxassetid://18322416316",
+    "rbxassetid://18322535039",
+    "rbxassetid://18322528944",
+    "rbxassetid://18322579830",
+    "rbxassetid://18322449430",
+    "rbxassetid://18322455565",
+    "rbxassetid://18322530847",
+    "rbxassetid://18322403734",
+    "rbxassetid://18322583277",
+    "rbxassetid://18322436504",
+    "rbxassetid://18322581598",
+    "rbxassetid://18322544582",
+}
+
+local CoreGui = game:GetService("CoreGui")
+
+local a={}pcall(function()OldInstance:Destroy()end)local b=Instance.new("ScreenGui")b.Name="RecipeBook"b.Parent=game.Players.LocalPlayer:WaitForChild("PlayerGui")b.ZIndexBehavior=Enum.ZIndexBehavior.Global;if b then b.Parent=gethui()elseif not is_sirhurt_closure and(syn and syn.protect_gui)then syn.protect_gui(b)b.Parent=CoreGui else b.Parent=CoreGui end;getgenv().OldInstance=b;local c=get_hidden_gui or gethui;if syn and typeof(syn)=="table"and RenderWindow then syn.protect_gui=gethui end;local d=game:GetService("UserInputService")local e=game:GetService("CoreGui")local f=game:GetService("HttpService")local function g(h)local i;local j;local k;local l;local function m(n)local o=n.Position-k;h.Position=UDim2.new(l.X.Scale,l.X.Offset+o.X,l.Y.Scale,l.Y.Offset+o.Y)end;h.InputBegan:Connect(function(n)if n.UserInputType==Enum.UserInputType.MouseButton1 or n.UserInputType==Enum.UserInputType.Touch then i=true;k=n.Position;l=h.Position;n.Changed:Connect(function()if n.UserInputState==Enum.UserInputState.End then i=false end end)end end)h.InputChanged:Connect(function(n)if n.UserInputType==Enum.UserInputType.MouseMovement or n.UserInputType==Enum.UserInputType.Touch then j=n end end)d.InputChanged:Connect(function(n)if n==j and i then m(n)end end)end
+
+UI["2"] = Instance.new("Frame", b)
+UI["2"]["BorderSizePixel"] = 0
+UI["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["2"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2"]["BackgroundTransparency"] = 1
+g(UI["2"])
+
+UI["3"] = Instance.new("Frame", UI["2"])
+UI["3"]["BorderSizePixel"] = 0
+UI["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["3"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["3"]["Size"] = UDim2.new(0.26992, 0, 0.58388, 0)
+UI["3"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+UI["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3"]["Name"] = [[Books]]
+
+UI["4"] = Instance.new("UICorner", UI["3"])
+UI["4"]["CornerRadius"] = UDim.new(0.02, 0)
+
+UI["5"] = Instance.new("UIGradient", UI["3"])
+UI["5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(21, 21, 21)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 21, 21))}
+
+UI["6"] = Instance.new("Frame", UI["3"])
+UI["6"]["BorderSizePixel"] = 0
+UI["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["6"]["Size"] = UDim2.new(0.17219, 0, 0.10345, 0)
+UI["6"]["Position"] = UDim2.new(0.07616, 0, 0.82759, 0)
+UI["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6"]["BackgroundTransparency"] = 1
+
+UI["7"] = Instance.new("UICorner", UI["6"])
+UI["7"]["CornerRadius"] = UDim.new(0.1, 0)
+
+UI["8"] = Instance.new("ImageButton", UI["6"])
+UI["8"]["BorderSizePixel"] = 0
+UI["8"]["BackgroundColor3"] = Color3.fromRGB(0, 85, 0)
+UI["8"]["Image"] = [[rbxassetid://18414334020]]
+UI["8"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["8"]["Name"] = [[Back]]
+UI["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+UI["9"] = Instance.new("UICorner", UI["8"])
+UI["9"]["CornerRadius"] = UDim.new(0.2, 0)
+
+UI["a"] = Instance.new("Frame", UI["3"])
+UI["a"]["BorderSizePixel"] = 0
+UI["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["a"]["Size"] = UDim2.new(0.17219, 0, 0.10345, 0)
+UI["a"]["Position"] = UDim2.new(0.76159, 0, 0.82759, 0)
+UI["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["a"]["BackgroundTransparency"] = 1
+
+UI["b"] = Instance.new("UICorner", UI["a"])
+UI["b"]["CornerRadius"] = UDim.new(0.1, 0)
+
+UI["c"] = Instance.new("ImageButton", UI["a"])
+UI["c"]["BorderSizePixel"] = 0
+UI["c"]["BackgroundColor3"] = Color3.fromRGB(0, 85, 0)
+UI["c"]["Image"] = [[rbxassetid://18414321141]]
+UI["c"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["c"]["Name"] = [[Next]]
+UI["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+UI["d"] = Instance.new("UICorner", UI["c"])
+UI["d"]["CornerRadius"] = UDim.new(0.2, 0)
+
+UI["e"] = Instance.new("Frame", UI["3"])
+UI["e"]["BorderSizePixel"] = 0
+UI["e"]["BackgroundColor3"] = Color3.fromRGB(53, 53, 53)
+UI["e"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["e"]["Size"] = UDim2.new(0.6948, 0, 0.53738, 0)
+UI["e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+UI["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+UI["f"] = Instance.new("UICorner", UI["e"])
+UI["f"]["CornerRadius"] = UDim.new(0.03, 0)
+
+UI["10"] = Instance.new("UIStroke", UI["e"])
+UI["10"]["Thickness"] = 5
+
+UI["11"] = Instance.new("ImageLabel", UI["e"])
+UI["11"]["BorderSizePixel"] = 0
+UI["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["11"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["11"]["Image"] = assetIds[currentIndex]
+UI["11"]["Size"] = UDim2.new(1.16311, 0, 1.27169, 0)
+UI["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["11"]["BackgroundTransparency"] = 1
+UI["11"]["Name"] = [[Recipes]]
+UI["11"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+
+UI["12"] = Instance.new("Frame", UI["3"])
+UI["12"]["BorderSizePixel"] = 0
+UI["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["12"]["Size"] = UDim2.new(0.17219, 0, 0.13166, 0)
+UI["12"]["Position"] = UDim2.new(0.78477, 0, 0.04075, 0)
+UI["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12"]["BackgroundTransparency"] = 1
+
+UI["13"] = Instance.new("UICorner", UI["12"])
+UI["13"]["CornerRadius"] = UDim.new(0.1, 0)
+
+UI["14"] = Instance.new("ImageButton", UI["12"])
+UI["14"]["BorderSizePixel"] = 0
+UI["14"]["BackgroundColor3"] = Color3.fromRGB(171, 0, 4)
+UI["14"]["Image"] = [[rbxassetid://18414366188]]
+UI["14"]["Size"] = UDim2.new(0.80769, 0, 0.78571, 0)
+UI["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["14"]["Position"] = UDim2.new(0.19231, 0, 0, 0)
+
+UI["15"] = Instance.new("UICorner", UI["14"])
+UI["15"]["CornerRadius"] = UDim.new(0.2, 0)
+
+local function updateImage()
+    UI["11"].Image = assetIds[currentIndex]
+end
+
+UI["c"].MouseButton1Click:Connect(function()
+    if currentIndex < #assetIds then
+        currentIndex = currentIndex + 1
+    else
+        currentIndex = 1
+    end
+    updateImage()
+end)
+
+UI["8"].MouseButton1Click:Connect(function()
+    if currentIndex > 1 then
+        currentIndex = currentIndex - 1
+    else
+        currentIndex = #assetIds
+    end
+    updateImage()
+end)
+
+UI["14"].MouseButton1Click:Connect(function()
+    b:Destroy()
+end)
+
+return UI["1"], require
